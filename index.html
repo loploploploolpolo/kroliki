@@ -8,25 +8,130 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
-<body>
+<body bgcolor="#000000">
     <h1>кролики</h1>
     <h2>команда</h2>
-    <img src="roblox.png" width="1000">
-    <div class="kartinki" id="wrapper123">
-        <div class="kartinki2" id="slider-wrap">
-            <ul id="slider">
-                <li>
-                    <p class="center">
-                        <img src="roblox.png" width="1000">
-                    </p>
-                </li>
-                <li>
-                    <p class="center">
-                        <img src="roblox1.png" width="1000">
-                    </p>
-                </li>
-            </ul>
+    <img classs="myimg" src="roblox.png" width="500">
+
+    <div class="slider middle">
+        <div class="slides">
+           <input type="radio" name="r" id="r1" checked>
+           <input type="radio" name="r" id="r2">
+           <input type="radio" name="r" id="r3">
+           <input type="radio" name="r" id="r4">
+           
+           <div class="slide s1">
+              <img src="roblox.png" alt="Изображение" class="img">
+           </div>
+           <div class="slide">
+              <img src="roblox1.png" alt="Изображение" class="img">
+           </div>
+           <div class="slide">
+              <img src="a2.png" alt="Изображение" class="img">
+           </div>
+           <div class="slide">
+              <img src="a.png" alt="Изображение" class="img">
+           </div>
         </div>
+        <div class="navigation">
+           <label for="r1" class="bar"></label>
+           <label for="r2" class="bar"></label>
+           <label for="r3" class="bar"></label>
+           <label for="r4" class="bar"></label>
+        </div>
+     </div>
+     <div class="word">
+     <h1 class="words">
+        <span>л</span>
+        <span>и</span>
+        <span>д</span>
+        <span>е</span>
+        <span>р</span>
+      </br>
+        <span>п</span>
+        <span>р</span>
+        <span>о</span>
+        <span>д</span>
+        <span>а</span>
+        <span>ж</span>
+      </h1>
     </div>
+    <!-- <div id="container1">
+        <div id="dino">
+            <img src="assets/dino.png" alt="dino">
+        </div>
+        <div id="block">
+            <img src="assets/block.png" alt="blocks">
+        </div>
+        <div id="road">
+            <img src="assets/road.png" alt="road">
+        </div>
+        <div id="cloud">
+            <img src="assets/cloud.jpg" alt="cloud">
+        </div>
+        <div id="gameOver">Game Over</div>
+    </div> -->
+    <!-- <script>
+        let container = document.querySelector("#container1");
+let dino = document.querySelector("#dino");
+let block = document.querySelector("#block");
+let road = document.querySelector("#road");
+let cloud = document.querySelector("#cloud");
+let score = document.querySelector("#score");
+let gameOver = document.querySelector("#gameOver");
+
+
+
+//start Game
+window.addEventListener("keydown", (start) => {
+      console.log(start);
+    if (start.code == "Enter") {
+        gameOver.style.display = "none";
+        block.classList.add("blockActive");
+        road.firstElementChild.style.animation = "roadAnimate 1.5s linear infinite";
+        cloud.firstElementChild.style.animation = "cloudAnimate 50s linear infinite";
+
+        //score
+        let playerScore = 0;
+        interval = setInterval(scoreCounter, 200);
+    }
+});
+
+
+//jump Your Character
+window.addEventListener("keydown", function(event) {
+    jump();
+});
+
+function jump() {
+    if (dino.classList != "jump"){
+        dino.classList.add("jump")
+    }
+   setTimeout (function(){
+    dino.classList.remove("jump")
+   }, 300)
+}
+
+//'Game Over' if 'Character' hit The 'Block' 
+let result = setInterval(() => {
+    let dinoTop = parseInt(getComputedStyle(dino).getPropertyValue("top"));
+    //    console.log("dinoBottom" + dinoBottom);
+
+    let blockLeft = parseInt(getComputedStyle(block).getPropertyValue("left"));
+    //    console.log("BlockLeft" + blockLeft);
+
+    if (dinoTop >= 140 && blockLeft >= 0 && blockLeft <= 50) {
+        //        console.log("Game Over");
+
+        gameOver.style.display = "block";
+        block.classList.remove("blockActive");
+        road.firstElementChild.style.animation = "none";
+        cloud.firstElementChild.style.animation = "none";
+        clearInterval(interval);
+        playerScore = 0;
+    }
+}, 10);
+
+    </script> -->
 </body>
 </html>
