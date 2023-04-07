@@ -214,6 +214,13 @@
   #r4:checked ~ .s1 {
     margin-left: -75%;
   }
-
-
+.kot{
+  color:aquamarine;
+}
+.tab{
   
+  border-color: aquamarine;
+}
+td{
+  color: aquamarine;
+}
